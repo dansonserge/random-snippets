@@ -1,0 +1,9 @@
+FROM python:3.8-slim-buster
+
+WORKDIR /usr/src/app
+
+COPY query2_ref.txt db_connection.py db_schema.sql index.py README.md requirements.txt tw_etl_progress_bar.py .gitignore ./
+RUN pip3 install -r requirements.txt
+
+CMD ["python3", "./index.py"]
+
