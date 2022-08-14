@@ -130,13 +130,24 @@ const restOperator = ()=>{
         we use both interchangeably, specifically we use 'rest' 
         to copy part or rest of an array or object. 
     */
-   
+
     let students = {classA:12, classB:13, classC:14, classD:15}
 
     let {classA, classB, ...remaining} = students;
 
     console.log(remaining);
 }
+
+
+   /* we can use our HeaderComponent like this <HeaderComponent className='my-item' /> 
+    thereby applying our 'my-item' class as if we added it manually to the component itself.
+
+ */
+const HeaderComponent = ({title, ...restProps})=>{
+    return <div {...restProps}> {title} </div>
+    }
+
+
 
 }
 
