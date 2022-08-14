@@ -1,0 +1,38 @@
+<button onclick='displayData'> see users </button>
+<div id='users'>
+</div>
+<div id='loading'>
+</div>
+<div id='error'>
+</div>
+
+
+<script>
+    const usersUI = document.getElementById("users");
+const loadingUI = document.getElementById("loading");
+const errorUI = document.getElementById("error");
+const apiUrl = "https://jsonplaceholder.typicode.com/users";
+
+// fetch data from an api
+const fetchData = async () => {
+const res = await fetch(apiUrl);
+return await res.json();
+};
+
+// display your data to the ui
+const displayData = async () => {
+errorUI.innerHTML = "";
+loadingUI.innerHTML = "Loading...";
+
+fetchData()
+.then((users) => {
+usersUI.innerHTML = users.map((item) => <p>$ {item.name}</p>);
+})
+.then(() => (loadingUI.innerHTML = ""))
+.catch(() => {
+loadingUI.innerHTML = "";
+errorUI.innerHTML = "Error fetching data";
+});
+};
+
+</script>

@@ -1,0 +1,50 @@
+<!-- https://medium.com/@reemshakes/is-ajax-getting-replaced-by-fetch-api-55207234793f -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial scale=1.0">
+  <title>Document</title>
+   <!--Importing the Jquery CDN link-->
+<script
+ src="https://code.jquery.com/jquery-3.6.0.min.js"
+ integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+ crossorigin="anonymous">
+</script>
+</head>
+<body>
+    <script>
+        
+      function prom(){
+        //function returns a promise
+        return new Promise((resolve, reject)=>{  
+
+        console.log("fetching data, please wait");
+
+        $.get("https://jsonplaceholder.typicode.com/posts", data =>{
+              //calling resolve function
+              resolve(data);
+
+           }).fail(err => {
+              //integrating error message
+
+              reject("failed to load json")
+
+          });
+      });
+    }
+
+
+    
+//function Prom() ends 
+prom().then((result) => {
+        console.log(result)
+    }).catch((error) => {
+        console.log(error)
+    });
+    
+    </script>
+</body>
+</html>
