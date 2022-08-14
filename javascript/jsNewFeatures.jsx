@@ -28,8 +28,16 @@ const ageOutput = `You are ${age} years old `
 //instead of the old way
 const ageOutputOld = 'You are ' + age + ' years old'
 
+//=================
 
+//Shorthand Properties
 
+const userName = "Danson"
+
+// instead of doing this
+let user = {userName: userName};
+//let's do this to use the shorthand property
+let userGood = {userName}  
 
 
 
