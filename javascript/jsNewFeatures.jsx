@@ -256,15 +256,40 @@ return (
  */
 
 
-// Please check the testHof.js file for examples
+// PLEASE CHECK THE TESTHOF.JS FILE FOR EXAMPLES
 
 
-
-
-/* Nullish coalsing operation */
+// Nullish coalsing operation 
 
 
 /* 
     Nullish coalescing operations(?? ) allows us to return the right hand operand 
     when the left side operand is null or undefined;
 */
+
+const a =12
+const b = 50;
+
+a ?? b // -> 12
+
+let c;
+let d =45
+c ?? d // -> 45
+
+
+// Optional Chaining *
+
+/* 
+    Optional chaining(?.) allows us to access the key of an object 
+    safely or call functions when we're not sure if it'll be available or not.
+*/
+
+let userOptionalChaining = {
+    name: "Joe",
+    details: { age: 82 }
+    
+    };
+    const userTown= userOptionalChaining?.address?.town;
+console.log(userTown); // undefined
+userOptionalChaining.fullInfo?.() 
+ 
