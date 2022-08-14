@@ -95,4 +95,13 @@ console.log(realName)
 }
 
 
+const giveDefaultValueAfterDistructuring = ()=>{
+    //What if we destructure an object and we want to give it a default value, 
+    //-> even while we're not sure this is available yet on the object,
+
+    const {name, favNumber, cars, favFood='jollof rice'  } = person
+    console.log(favFood) // 'jollof rice'
+
+}
+
 //============
