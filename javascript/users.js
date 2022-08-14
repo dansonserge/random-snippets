@@ -6,7 +6,7 @@ const users = [
         "email": "Sincere@april.biz",
         "phone": "1-770-736-8031 x56442",
         "website": "hildegard.org",
-        "lifeTimePurcahse":4000
+        "lifeTimePurchase":10
     },
     {
         "id": 2,
@@ -15,7 +15,7 @@ const users = [
         "email": "Shanna@melissa.tv",
         "phone": "010-692-6593 x09125",
         "website": "anastasia.net",
-        "lifeTimePurcahse":78200
+        "lifeTimePurchase":10
      },
     {
         "id": 3,
@@ -24,7 +24,7 @@ const users = [
         "email": "Nathan@yesenia.net",
         "phone": "1-463-123-4447",
         "website": "ramiro.info",
-        "lifeTimePurcahse":600
+        "lifeTimePurchase":10
     },
     {
         "id": 4,
@@ -33,7 +33,7 @@ const users = [
         "email": "Julianne.OConner@kory.org",
         "phone": "493-170-9623 x156",
         "website": "kale.biz",
-        "lifeTimePurcahse":10000
+        "lifeTimePurchase":10
     },
     
 ]

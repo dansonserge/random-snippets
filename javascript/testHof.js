@@ -30,7 +30,29 @@ it returns a boolean value, either true or false.
 
 const userIsPresent = users.map(i=> i.id).includes(1)
 
-console.log(userIsPresent)
+
+// Reduce
+
+/* 
+
+The reduce method takes in a reducer function to return a singular value,
+
+Anatomy of the reduce method looks like below;
+array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
+
+*/
+
+
+const reducerFunction = (total, currentValue)=>{
+
+    return total+currentValue.lifeTimePurchase;
+
+}
+
+const totalLifeTimePurchase = users.reduce(reducerFunction, 0);
+
+
+console.log(totalLifeTimePurchase);
 
 
 
