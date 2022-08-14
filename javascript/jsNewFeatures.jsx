@@ -40,5 +40,25 @@ let user = {userName: userName};
 let userGood = {userName}  
 
 
+//=====================
+//Rest/Spread
 
+const restSpread =()=>{
+    const user2  = {
+        name:'Tony',
+        age:12
+      }
+      
+      const otherPropertie = {
+      hobby:'hiking',
+      bestColor:'red'
+    }
+
+    // use spread operator to join the two objects
+    let joined = {...user2, ...otherPropertie}
+    //this can also be used in arrays
+    
+}
+
+//========
 
