@@ -61,4 +61,30 @@ const restSpread =()=>{
 }
 
 //========
+//distructuring
+/* Destructuring is a way of accessing the values inside an object or array in a more cleaner and readable way. */
 
+const distructuring1 =  ()=> {
+    const person ={
+        favNumber:'green',
+        name:'Mike',
+        cars:['mercedes', 'toyota']
+      }
+    
+      /* before es6, if we want to get the individual properties in the person object,
+       we'll first need to assign each of the properties to a varaiable; */
+    
+    
+    const favNumber1 = person.favNumber;
+    const name = person.name
+    const cars = person.cars
+    
+    // with object destructuring, we could do something like below;
+    
+    function distructuring(){
+        const { favNumber, name, cars } = person
+    console.log(favNumber, name, cars)
+    }
+}
+
+//============
