@@ -150,7 +150,10 @@ const HeaderComponent = ({title, ...restProps})=>{
 
 //============
 //Default Parameters
-
+/* 
+    Default parameters allows us to set a default value for a function parameter
+    if its missing while being called. For example;
+*/
 const defaultParameters = ()=>{
 function greetUser(username='user'){
     return `Welcome ${username}, hope you bought some pizzas`
@@ -163,3 +166,38 @@ function greetUser(username='user'){
     console.log(greetingsTwo) // 'Welcome user, hope you bought some pizzas'
 
 }
+//===================
+//ES Modules
+
+/*
+person.js
+----------
+====> NAMED EXPORT
+export const person = {
+  name:'Simon',
+  color:'yellow'
+}
+
+import { person } from 'person.js'
+console.log(person) // { name:'Simon', color:'yellow' }
+*/
+
+import { person } from 'person.js'
+console.log(person) // { name:'Simon', color:'yellow' }
+
+/* 
+    but what if we already have a variable in our file having the same name? 
+    well we can rename it with alias import {person as currentPerson } from './person.js' 
+    we have successfully rename person to currentPerson.
+*/
+
+import { person as currentPerson } from "./person.js";
+
+console.log(currentPersion) // { name:'Simon', color:'yellow' }
+console.log(person) 
+
+
+//=======
+
+
+
