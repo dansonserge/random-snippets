@@ -12,7 +12,16 @@ let usersFind = users.find(checker);
 
 let usersFilter = users.filter(checker);
 
+const userIds = users.map(user => user.id)
 
-console.table(usersFilter);
+/* 
+        Map method
+        The map method returns a new array filled with items that 
+        satisfies the condition of the callback function. 
+        It also ends up changing the original array.
+*/
+
+
+console.table(userIds);
 
 
