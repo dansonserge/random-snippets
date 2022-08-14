@@ -22,6 +22,16 @@ const userIds = users.map(user => user.id)
 */
 
 
-console.table(userIds);
+/* 
+
+The include method is used to check whether a given item is present in an array, 
+it returns a boolean value, either true or false.
+ */
+
+const userIsPresent = users.map(i=> i.id).includes(1)
+
+console.log(userIsPresent)
+
+
 
 
