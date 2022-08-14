@@ -146,9 +146,20 @@ const restOperator = ()=>{
 const HeaderComponent = ({title, ...restProps})=>{
     return <div {...restProps}> {title} </div>
     }
-
-
-
 }
 
 //============
+//Default Parameters
+
+const defaultParameters = ()=>{
+function greetUser(username='user'){
+    return `Welcome ${username}, hope you bought some pizzas`
+    }
+    
+    const greetingsOne = greetUser('Greg')
+    console.log(greetingsOne) // 'Welcome Greg, hope you bought some pizzas'
+    
+    const greetingsTwo = greetUser()
+    console.log(greetingsTwo) // 'Welcome user, hope you bought some pizzas'
+
+}
