@@ -21,7 +21,7 @@ const Users= () => {
     // includes
     const isRaffleWinner = users.map(user=>user.id).includes(currenttUserId)
 
-    return (
+ /*    return (
             <>
             {_users}
             <p>Total Purchase: {totalLifeTimePurchase} </p>
@@ -35,5 +35,5 @@ const Users= () => {
                 raffle status: {isRaffleWinner ? 'Congrats, you're a raffle winner' : 'Oops! Try again later'}
         
         </>;
-    );
+    ); */
 }
