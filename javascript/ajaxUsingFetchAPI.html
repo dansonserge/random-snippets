@@ -1,0 +1,71 @@
+<!-- 
+Fetch() API
+Fetch is an interface for making AJAX calls in JavaScript. 
+It is implemented widely by modern browsers and is used to call an API. 
+Calling fetch returns a promise, with a Response object.
+
+
+What can you achieve with fetch that cant be achieved with XHR object?
+
+You can perform no-cors requests, i.e you can receive response from a server that doesn't implement CORS. 
+You can't access the response body directly from JavaScript, but you can use it with other APIs (e.g. the Cache API);
+
+Fetch syntax
+
+fetch(file / URL).then( function(response) {
+    return response.data()
+    //✅data types:
+    //1. json 
+    //2. text 
+    //3. blob 
+    
+}).then(function(result){
+    //✅when promise is returned succesfully, response.data is logged inside result variable 
+    console.log(result)
+    
+}).catch(function(error){
+    //✅when promise is failed 
+    console.log(error)
+})
+
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial scale=1.0">
+  <title>Document</title>
+   <!--Importing the Jquery CDN link-->
+<script
+ src="https://code.jquery.com/jquery-3.6.0.min.js"
+ integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+ crossorigin="anonymous">
+</script>
+</head>
+<body>
+    <script>
+        // this API returns a promise 
+                fetch("https://jsonplaceholder.typicode.com/posts")
+                .then(function(response){
+                   return response.json();
+                   //✅.then, returns promise over here, however this promise will be used in the next then function
+        
+                //✅the next then function attached to the method chain 
+                }).then(function(result){
+                //if promise succeeds this function will execute
+                
+                    console.log(result)
+                    // data printed on console, is due to this console 
+        
+                }).catch(function(error) {
+                //else if the promise fails, this function will execute 
+               
+                   console.log(error)
+        
+                });
+            </script>
+        </body>
+</html>
