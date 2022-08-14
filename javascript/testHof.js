@@ -2,12 +2,17 @@ import users from './users.js';
 
 
 const checker = (item )=>{
-    return item.id === 1;
+    return item.id > 1;
 };
 
 //using find function
-let newUsers = users.find(checker);
+let usersFind = users.find(checker);
 
-console.table(newUsers);
+//using filter function
+
+let usersFilter = users.filter(checker);
+
+
+console.table(usersFilter);
 
 
