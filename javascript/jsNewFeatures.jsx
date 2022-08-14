@@ -196,6 +196,9 @@ import { person as currentPerson } from "./person.js";
 console.log(currentPersion) // { name:'Simon', color:'yellow' }
 console.log(person) 
 
+import colorList from './colors.js'
+
+console.log(colorList)
 
 //=======
 
