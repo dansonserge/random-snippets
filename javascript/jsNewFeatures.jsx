@@ -86,7 +86,7 @@ const distructuring1 =  ()=> {
     console.log(favNumber, name, cars)
     }
     
-}
+
 
 const renameProprtyNameAfterDistructure =()=>{
 //what if we want to rename the name property on the person object immediatelty after destructuring, 
@@ -101,6 +101,42 @@ const giveDefaultValueAfterDistructuring = ()=>{
 
     const {name, favNumber, cars, favFood='jollof rice'  } = person
     console.log(favFood) // 'jollof rice'
+
+}
+
+const distructureNestedObjects = ()=>{
+    /* What if we destructure an object and we want to give it a default value, 
+    even while we're not sure this is available yet on the object, */
+        const customer = {
+            name:'Tom',
+            mobile:"078 7070 2325",
+            email:"tomfield@email.com",
+            address:{
+                country:'UK',
+                city:'East Davoch',
+                zipCode:"AB34",
+                street:'33 Guildford Rd'
+            } 
+        }
+
+        const {address: { country } } = customer
+        console.log(country) // UK
+}
+
+const restOperator = ()=>{
+    /* 
+        in our previous topic, we talked about 'rest/spread', 
+        Let's talk more about the rest operator, most of the time, 
+        we use both interchangeably, specifically we use 'rest' 
+        to copy part or rest of an array or object. 
+    */
+   
+    let students = {classA:12, classB:13, classC:14, classD:15}
+
+    let {classA, classB, ...remaining} = students;
+
+    console.log(remaining);
+}
 
 }
 
