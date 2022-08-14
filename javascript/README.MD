@@ -1,0 +1,18 @@
+# Javascript to know for Reactjs
+
+## Features
+
+- Let and Const
+- Ternaries
+- Template Literals
+- Shorthand Properties
+- Rest/Spread
+- Destructuring
+- Default Parameters
+- ES Modules
+- Short circuit Evaluation
+- Higher Order Functions (Array Methods)
+- Nulish Coalescing Operation
+- Optional Chaining
+- Arrow Functions
+  
