@@ -261,3 +261,10 @@ return (
 
 
 
+/* Nullish coalsing operation */
+
+
+/* 
+    Nullish coalescing operations(?? ) allows us to return the right hand operand 
+    when the left side operand is null or undefined;
+*/
