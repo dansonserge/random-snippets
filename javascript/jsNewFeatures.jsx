@@ -85,6 +85,14 @@ const distructuring1 =  ()=> {
         const { favNumber, name, cars } = person
     console.log(favNumber, name, cars)
     }
+    
 }
+
+const renameProprtyNameAfterDistructure =()=>{
+//what if we want to rename the name property on the person object immediatelty after destructuring, 
+const {name:realName, favNumber, cars} = person;
+console.log(realName)
+}
+
 
 //============
