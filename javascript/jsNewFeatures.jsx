@@ -200,7 +200,45 @@ import colorList from './colors.js'
 
 console.log(colorList)
 
-//=======
+//========================
+//Short circuits
 
 
+/* 
+AND( && )
+true && 'Hello' -> This outputs 'Hello'
+true && true && false -> This outputs 'false'
 
+false && true -> This outputs 'false'
+(true && false) && false -> This outputs 'false'
+
+OR ( || )
+
+true || false -> This outputs true
+
+false || 'hello' || false -> This outputs 'hello'
+ */
+
+import {useState, useEffect} from 'react';
+
+const Items = ()=>{
+const [loading, setLoading] = useState(false)
+const [data, setData] = useState([])
+async function ladData(){
+const response = await (await fetch('http://dataBaseUrl')).json()
+setData=(response)
+setLoading(false)
+}
+useEffect(()=>{
+setLoading(true)
+loadData()
+},[])
+return (
+
+<div>
+  {loading && "Loading"} // while loading is true shows 'Loading...'
+  {data.lengtht && data.map((item) => <p key={item.id}> {item.sampleName} </p>)}
+  // if data.length is truthy, ie, it's length is greater than 1 // then go
+  ahead to ahead to show list in the UI
+</div>
+) }
