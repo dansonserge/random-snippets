@@ -10,6 +10,8 @@ COPY src src
 
 RUN mvn package
 
+
+
 FROM openjdk:11
 COPY --from=buildstage /app/app.jar .
 ENTRYPOINT ["java", "-jar","app.jar"]
